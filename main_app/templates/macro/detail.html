@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Homepage</title>
+</head>
+<body>
+      <div class="header">
+            <h1 class="title">My Macro Meter</h1>
+            <a class="about-link" href="">about </a>
+      </div> 
+      {% for m in macros%}
+      <div class="totals-div">
+            <h3 class="cals">Calories {{%m.calories%}} </h3>
+            <h3 class="protein">Protein{{%m.protein%}}</h3>
+            <h3 class="carbs">Carbs{{%m.carbohydrates%}}</h3>
+            <h3 class="fat">Fat{{m.fat}}</h3>
+      </div>
+      <table>
+            {{ form.as_table }}
+      </table>
+
+</body>
+</html>
