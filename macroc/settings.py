@@ -78,6 +78,8 @@ DATABASES = {
       'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'macroc',
+             'USER': 'postgres',       # windows/linux-only
+        'PASSWORD': 'Hermes770', # windows/linux-only
       }
 }
 
