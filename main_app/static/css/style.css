@@ -10,12 +10,11 @@ body{
       padding: 0;
 }
 
-.nav-bar {
+.nav-bar-fixed{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      background-color: black;
-      color: white;
+      background-color:#FECE46;
 }
 
 .macro-calc{
