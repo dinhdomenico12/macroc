@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from main_app.models import Macros 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import get_object_or_404, render
 # Create your views here.
 def home(request):
   return render(request, 'home.html')
@@ -19,6 +20,9 @@ class Macro_create(CreateView):
   model = Macros
   fields = '__all__'
   success_url = '/meals/'
+
+# sign up form
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
