@@ -11,18 +11,16 @@ body{
 }
 
 
-.nav-wrapper{
-      background-color:#FECE46;
-}
-
 .nav-bar{
       display: flex;
       justify-content: flex-start;
+      background-color:#FECE46;
       
 }
 .nav-links{
       display: flex;
       justify-content: flex-end;
+      
 }
 
 .macro-calc{

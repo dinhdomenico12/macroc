@@ -2,5 +2,19 @@
 {% block content %}
 
 <h1>Home</h1>
+<div class="total-title">
+      <h3 class="daily-total">Todays Desired Total </h3>
+</div>
+<div class="total-macros">
+            <div id="macro-goals">
+                  <form action="" method="post">
+                        {% csrf_token %}
+                  <table>
+                        {{ form.as_table }}
+                  </table>
+                  <input type="submit" value="Submit!" class="btn">
+            </form>
+      </div>
+</div>
 
 {% endblock %}
