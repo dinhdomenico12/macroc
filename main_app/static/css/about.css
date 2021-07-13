@@ -10,7 +10,7 @@ body{
       padding: 0;
 }
 
-.nav-bar-fixed{
+.nav-bar{
       display: flex;
       justify-content: flex-start;
       align-items: center;
