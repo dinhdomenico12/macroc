@@ -13,4 +13,12 @@ class Macros(models.Model):
       fats= models.FloatField(max_length=4)
       user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+class Goals(models.Model):
+      calories= models.FloatField(max_length=10)
+      protein=models.FloatField(max_length= 4)
+      carbohydrates= models.FloatField(max_length= 4)
+      fats= models.FloatField(max_length=4)   
+      macros = models.ForeignKey(Macros, on_delete=models.CASCADE)
+
+
 
