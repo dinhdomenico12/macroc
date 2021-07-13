@@ -6,6 +6,7 @@ from datetime import date
 
 
 class Macros(models.Model):
+      name= models.CharField(max_length=100)
       calories= models.FloatField(max_length=10)
       protein=models.FloatField(max_length= 4)
       carbohydrates= models.FloatField(max_length= 4)

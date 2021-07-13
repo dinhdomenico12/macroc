@@ -8,6 +8,8 @@ from .models import Macros
 def index(request):
       macros = Macros.objects.all()
       return render(request, 'macros/index.html', { 'macros': macros})
+def about(request):
+  return render(request, 'about.html')
 
 
 def signup(request):

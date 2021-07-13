@@ -3,16 +3,17 @@
 
             <h1 class="title">My Macro Meter</h1>
       
-      {% for m in Macros%}
+      {% for m in macros%}
       <div class="totals-div">
-            <h3 class="cals">Calories {{%m.calories%}} </h3>
-            <h3 class="protein">Protein{{%m.protein%}}</h3>
-            <h3 class="carbs">Carbs{{%m.carbohydrates%}}</h3>
-            <h3 class="fat">Fat{{m.fat}}</h3>
+            <h3 class="name">Name: {{m.name}} </h3>
+             <h3 class="cals">Calories {{m.calories}} </h3>
+            <h3 class="protein">Protein{{m.protein}}</h3>
+            <h3 class="carbs">Carbs{{m.carbohydrates}}</h3>
+            <h3 class="fat">Fat{{m.fats}}</h3>
       </div>
       {% endfor %}
-      <table>
+      <!-- <table>
             {{ form.as_table }}
-      </table>
+      </table> -->
 
       {% endblock %}
