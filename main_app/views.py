@@ -2,16 +2,23 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from .models import Macros
-
+from main_app.models import Macros 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # Create your views here.
+def home(request):
+  return render(request, 'home.html')
+
 def index(request):
       macros = Macros.objects.all()
-      return render(request, 'macros/index.html', { 'macros': macros})
+      return render(request, 'macro/index.html', {'macros': macros})
+
 def about(request):
   return render(request, 'about.html')
 
-
+class Macro_create(CreateView):
+  model = Macros
+  fields = '__all__'
+  success_url = '/meals/'
 def signup(request):
   error_message = ''
   if request.method == 'POST':
