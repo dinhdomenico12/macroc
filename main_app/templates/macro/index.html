@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
-            <h1 class="title">My Macro Meter</h1>
-      
+      <h1 class="title">My Macro Meter</h1>
       {% for m in macros%}
       <div class="totals-div">
             <h3 class="name">Name: {{m.name}} </h3>
@@ -12,8 +10,7 @@
             <h3 class="fat">Fat{{m.fats}}</h3>
       </div>
       {% endfor %}
-      <!-- <table>
+      <table>
             {{ form.as_table }}
-      </table> -->
-
-      {% endblock %}
+      </table>
+{% endblock %}
