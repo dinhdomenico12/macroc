@@ -1,69 +1,18 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="/static/css/style.css/">
-      <title>Home page</title>
-</head>
-<body>
-<header class="headContent">
-      <nav class="nav-bar">
-            <div class="macro-calc">MACRO COUNTER APP</div>
-                  <a href="#" class="toggle-button">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                  </a>
-            <div class="nav-links" id="topNavWrapper">
-                  <ul class="headTag">
-                        <li><a href="">Macros</a></li>
-                        <!-- {% if user.is_authenticated %} -->
-                              <li><a href="">About</a></li>
-                              <li><a href="">Days</a></li>
-                              <li><a href="">Log Out</a></li>
-                        <!-- {% else %} -->
-                              <li><a href="">Sign Up</a></li>
-                              <li><a href="">Log In</a></li>
-                        <!-- {% endif %} -->
-                  </ul>
-            </div>
-      </nav>
-</header>
-<main>
-      <div class="total-wrapper" >
-            <div class="total-title">
-                  <h3 class="daily-total">Todays Desired Total </h3>
-            </div>
-            <div class="total_macros">
-                  <ul>
-                        <li>Protein___</li>
-                        <li>Carbs___</li>
-                        <li>Fat___</li>
-                  </ul>
-            </div>
+{% extends 'base.html' %}
+{% block content %}
+
+            <h1 class="title">My Macro Meter</h1>
+      
+      {% for m in Macros%}
+      <div class="totals-div">
+            <h3 class="cals">Calories {{%m.calories%}} </h3>
+            <h3 class="protein">Protein{{%m.protein%}}</h3>
+            <h3 class="carbs">Carbs{{%m.carbohydrates%}}</h3>
+            <h3 class="fat">Fat{{m.fat}}</h3>
       </div>
-      <div class="daily-goal">
-            <form class="daily-goal-form" action="" method="POST">
-			<div id="form-history" class="meal-form">
-				<h3 class="daily-macros">Daily macros</h3>
-			</div>
-			<div id="meal-date" class="breakfast-form">
-				<label for="expiry-month">Enter custom Food</label>
-				<div id="date-val">
-                              <ul>
-                                    <li>Name <input type="text" class="daily-food"  placeholder="" required></li>
-                                    <li>Calories <input type="text" class="daily-calories"  placeholder="" required></li>
-                                    <li>Protein <input type="text" class="daily-protein"  placeholder="" required></li>
-                                    <li>Carbs <input type="text" class="daily-carbs" placeholder="" required></li>
-                                    <li>Fat <input type="text" class="daily-fat"  placeholder="" required></li>
-                                    <button type="submit" class="submit-btn">Submit </button>
-                              </ul>
-			</div>
-		</form>
-      </div>
-</main>
-</body>
-</html>
+      {% endfor %}
+      <table>
+            {{ form.as_table }}
+      </table>
+
+      {% endblock %}

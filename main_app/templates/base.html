@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>My Macro Meter</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+      <header class="navbar-fixed">
+      <nav>
+            <div class="nav-wrapper">
+            <ul>
+            <li><a href="/" class="">&nbsp;&nbsp; My Macro Meter</a></li>
+            </ul>
+            <ul class="">
+                  {% if user.is_authenticated %}
+                        <li><a href="{% url 'about' %}"">About</a></li>
+                        <li><a href="{% url 'macro_create' %}">Add macros</a></li>
+                        <li><a href="{% url 'macro_detail' %}">View All Macros</a></li>
+                        <li><a href="{% url 'logout' %}">Log Out</a></li>
+                  {% else %}
+                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                        <li><a href="{% url 'login' %}">Log In</a></li>
+                  {% endif %}
+            </div>
+      </nav>
+      </header>
+      <main class="container">
+      {% block content %}
+      {% endblock %}
+      </main>
+      <footer class="page-footer">
+      <div class="right">All Rights Reserved, &copy; My Macro Meter &nbsp;</div>
+      </footer>
+</body>
+</html>

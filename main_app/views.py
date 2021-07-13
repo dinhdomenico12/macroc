@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from .models import Macros
 
 # Create your views here.
-def index(request,):
-  # database stuff 0-
-  return render(request, 'macro/index.html')
+def index(request):
+      macros = Macros.objects.all()
+      return render(request, 'macros/index.html', { 'macros': macros})
 
 
 def signup(request):
