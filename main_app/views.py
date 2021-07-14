@@ -6,15 +6,14 @@ from main_app.models import Goals, Macros
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import get_object_or_404, render
 # Create your views here.
-# def home(request):
-#   return render(request, 'home.html')
 
 def index(request):
       macros = Macros.objects.all()
-      return render(request, 'about.html', {'macros': macros})
+      goals = Goals.objects.all()
+      return render(request, 'home.html', {'macros': macros},{'goals':goals})
 
-def about(request):
-  return render(request, 'about.html')
+def home(request):
+  return render(request, 'home.html')
 
 
 class Macro_create(CreateView):

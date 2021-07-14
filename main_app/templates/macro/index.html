@@ -1,5 +1,6 @@
-{% extends 'about.html' %}
+{% extends 'home.html' %}
 {% block content %}
+
       <h1 class="Goals">Daily Macros</h1>
       {%for g in goals%}
       <div class="goals-div">
@@ -28,4 +29,6 @@
       <table>
             {{ form.as_table }}
       </table>
+
+      
 {% endblock %}
