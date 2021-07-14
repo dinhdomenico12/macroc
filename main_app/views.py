@@ -32,7 +32,7 @@ class Goals_create(CreateView):
 class Macroupdate(UpdateView):
     model = Macros
     fields = ['name', 'calories','protein','fats']
-    success_url = '/meals/', 
+    success_url = '/meals/' 
 
 def macro_delete(request, macro_id):
     Macros.objects.filter(id=macro_id).delete()
