@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404, render
 
 def index(request):
       macros = Macros.objects.all()
-      return render(request, 'macro/index.html', {'macros': macros})
+      return render(request, 'about.html', {'macros': macros})
 
 def about(request):
   return render(request, 'about.html')

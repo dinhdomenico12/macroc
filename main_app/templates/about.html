@@ -11,30 +11,32 @@
             {% endblock %}
       </title>
       <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
- 
 </head>
 <body>
       <header class="navbar-fixed">
-      <nav class="nav-bar">
-            <div class="nav-wrapper">
-            <ul>
-            <li><a href="/" class="">&nbsp;&nbsp; My Macro Meter</a></li>
-            </ul>
-            <ul class="nav-links">
-                  {% if user.is_authenticated %}
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'macrocreate' %}">Add macros</a></li>
-                        <li><a href="{% url 'index' %}">View All Macros</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
-                  {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
-                  {% endif %}
-            </div>
-      </nav>
+            <div class="title-wrapper">
+                  <h2 class="app-title"> My Macro Meter</h2>
+            </div>   
+      <div class="nav-div">
+            <nav class="nav-bar">
+                  <ul class="nav-links">
+                        {% if user.is_authenticated %}
+                              <li><a href="{% url 'about' %}">Home</a></li>
+                              <li><a href="{% url 'macrocreate' %}">Add macros</a></li>
+                              <li><a href="{% url 'index' %}">View All Macros</a></li>
+                              <li><a href="{% url 'logout' %}">Log Out</a></li>
+                        {% else %}
+                              <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                              <li><a href="{% url 'login' %}">Log In</a></li>
+                        {% endif %}
+                  </ul>
+            </div>      
+            </nav>
       </header>
       <main class="container">
-      {% block content %}
+            <div class="block-div">
+                  {% block content %}
+            </div>
       {% endblock %}
       </main>
       <footer class="page-footer">
@@ -42,3 +44,5 @@
       </footer>
 </body>
 </html>
+
+
