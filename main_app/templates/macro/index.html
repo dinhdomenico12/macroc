@@ -13,8 +13,9 @@
       <table>
             {{ form.as_table }}
       </table>
+
       <h1 class="Macros">My Macro Meter</h1>
-      {% for m in macros%}
+      {%for m in macros%}
       <div class="totals-div">
             <h4 class="name">Name: {{m.name}} </h4>
             <h4 class="cals">Calories {{m.calories}} </h4>
