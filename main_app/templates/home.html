@@ -21,7 +21,7 @@
             <nav class="nav-bar">
                   <ul class="nav-links">
                         {% if user.is_authenticated %}
-                              <li><a href="{% url 'about' %}">Home</a></li>
+                              <li><a href="{% url 'homepage' %}">Home</a></li>
                               <li><a href="{% url 'macrocreate' %}">Add macros</a></li>
                               <li><a href="{% url 'index' %}">View All Macros</a></li>
                               <li><a href="{% url 'logout' %}">Log Out</a></li>
