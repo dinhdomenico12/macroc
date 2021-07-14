@@ -28,6 +28,16 @@ class Goals_create(CreateView):
       success_url = '/meals/'
 
 
+
+class Macroupdate(UpdateView):
+    model = Macros
+    fields = ['name', 'calories','protein','fats']
+    success_url = '/meals/', 
+
+def macro_delete(request, macro_id):
+    Macros.objects.filter(id=macro_id).delete()
+    return redirect('/meals/')
+
 # sign up form
 
 def signup(request):

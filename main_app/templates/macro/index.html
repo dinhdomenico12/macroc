@@ -20,6 +20,9 @@
             <h4 class="protein">Protein{{m.protein}}</h4>
             <h4 class="carbs">Carbs{{m.carbohydrates}}</h4>
             <h4 class="fat">Fat{{m.fats}}</h4>
+            <a href="{% url 'macroupdate' m.id %}">Edit</a>
+            <a href='/meals/{{ m.id }}/delete'>Delete</a>
+
       </div>
       {% endfor %}
       <table>
