@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404, render
 
 def index(request):
       macros = Macros.objects.all()
-      goals = Goals.objects.all()
+      goals = Goals.objects.filter(user=request.user)
       return render(request, 'macro/index.html', {'macros': macros,'goals':goals})
 
 def home(request):
