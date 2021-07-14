@@ -1,13 +1,25 @@
 {% extends 'about.html' %}
 {% block content %}
-      <h1 class="title">My Macro Meter</h1>
+      <h1 class="Goals">Daily Macros</h1>
+      {%for g in goals%}
+      <div class="goals-div">
+            <h3 class="cals">Calories {{g.calories}} </h3>
+            <h3 class="protein">Protein{{g.protein}}</h3>
+            <h3 class="carbs">Carbs{{g.carbohydrates}}</h3>
+            <h3 class="fat">Fat{{g.fats}}</h3>
+      </div>
+      {% endfor %}
+      <table>
+            {{ form.as_table }}
+      </table>
+      <h1 class="Macros">My Macro Meter</h1>
       {% for m in macros%}
       <div class="totals-div">
-            <h3 class="name">Name: {{m.name}} </h3>
-             <h3 class="cals">Calories {{m.calories}} </h3>
-            <h3 class="protein">Protein{{m.protein}}</h3>
-            <h3 class="carbs">Carbs{{m.carbohydrates}}</h3>
-            <h3 class="fat">Fat{{m.fats}}</h3>
+            <h4 class="name">Namea: {{m.name}} </h4>
+            <h4 class="cals">Calories {{m.calories}} </h4>
+            <h4 class="protein">Protein{{m.protein}}</h4>
+            <h4 class="carbs">Carbs{{m.carbohydrates}}</h4>
+            <h4 class="fat">Fat{{m.fats}}</h4>
       </div>
       {% endfor %}
       <table>

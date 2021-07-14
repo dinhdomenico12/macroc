@@ -2,12 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from main_app.models import Macros 
+from main_app.models import Goals, Macros 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import get_object_or_404, render
 # Create your views here.
-def home(request):
-  return render(request, 'home.html')
+# def home(request):
+#   return render(request, 'home.html')
 
 def index(request):
       macros = Macros.objects.all()
@@ -16,10 +16,17 @@ def index(request):
 def about(request):
   return render(request, 'about.html')
 
+
 class Macro_create(CreateView):
-  model = Macros
-  fields = '__all__'
-  success_url = '/meals/'
+      model = Macros
+      fields = '__all__'
+      success_url = '/meals/'
+
+class Goals_create(CreateView):
+      model = Goals
+      fields = '__all__'
+      success_url = '/meals/'
+
 
 # sign up form
 
