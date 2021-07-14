@@ -67,8 +67,15 @@ body{
       margin-left: 35rem;
 } */
 
-.container{
+.page-footer{
       display: flex;
+      justify-content:flex-end;
+      align-items: center;
+}
+
+.block-div{
+      display: flex;
+      background: url(diana-polekhina-OpB7gkQY9oc-unsplash.jpg);
       justify-content: center;
 }
 
@@ -84,6 +91,22 @@ body{
       background: #528950;
       margin-top: 50px;
       padding: 8px;
+      color: white;
+      border-radius: 10px;
+}
+
+.login-box{
+      background: #528950;
+      margin-top: 50px;
+      padding: 15px;
+      color: white;
+      border-radius: 10px;
+}
+
+.signup-block{
+      background: #528950;
+      margin-top: 50px;
+      padding: 15px;
       color: white;
       border-radius: 10px;
 }
