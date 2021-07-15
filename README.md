@@ -24,3 +24,7 @@ Do you want to lose weight? Gain muscle? Improve health? Boost performance? This
 
 ## Next Steps: Planned future enhancements
 
+- Personalized comment section
+- Upload own personal files/pictures.
+-  Use API
+- Use a Macro Calculator
