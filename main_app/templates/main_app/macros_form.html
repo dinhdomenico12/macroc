@@ -3,22 +3,20 @@
 
 <main>
       <div class="total-wrapper" >
-            
 			<div id="form-history" class="meal-form">
 				<h3 class="daily-macros">Daily macros</h3>
 			</div>
 			<div id="meal-date" class="macro-form">
-				<label for="expiry-month">Enter custom Food</label>
+				<h4 class="expiry-month">Enter custom Food</h4>
 				<div id="date-val">
-                              <form action="" method="post">
+                              <form action="" method="post" style="padding-left:100px ;">
                                     {% csrf_token %}
                               <table>
                                     {{ form.as_table }}
                               </table>
                               <input type="submit" value="Submit!" class="btn">
                         </form>
-			</div>
-		
+			</div>		
       </div>
 
       {% endblock %}

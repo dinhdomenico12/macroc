@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8000/meals/create/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>    
+            
+            
+      </title>
+      <link rel="stylesheet" type="text/css" href="./localhost_files/about.css">
+</head>
+<body>
+      <header class="navbar-fixed">
+            <div class="title-wrapper">
+                  <h2 class="app-title"> My Macro Meter</h2>
+            </div>   
+      <div class="nav-div">
+            <nav class="nav-bar">
+                  <ul class="nav-links">
+                        
+                              <li><a href="http://localhost:8000/home/">Home</a></li>
+                              <li><a href="http://localhost:8000/meals/create/goals">Add Goals</a></li>
+                              <li><a href="http://localhost:8000/meals/create/">Add Macros</a></li>
+                              <li><a href="http://localhost:8000/meals/">View All Macros</a></li>
+                              <li><a href="http://localhost:8000/accounts/logout/">Log Out</a></li>
+                        
+                  </ul>
+            </nav></div>      
+            
+      </header>
+      
+
+<main>
+      <div class="total-wrapper">
+			<div id="form-history" class="meal-form">
+				<h3 class="daily-macros">Daily macros</h3>
+			</div>
+			<div id="meal-date" class="macro-form">
+				<h4 class="expiry-month">Enter custom Food</h4>
+				<div id="date-val">
+                              <form action="http://localhost:8000/meals/create/" method="post" style="padding-left:100px ;">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="P0UJTuLLfOrQrhZRe8dcgBueG7HtAuhkcRY4GCPj7qeTOScD134mvKx4hkHX4hPp">
+                              <table>
+                                    <tbody><tr><th><label for="id_name">Name:</label></th><td><input type="text" name="name" maxlength="100" required="" id="id_name"></td></tr>
+<tr><th><label for="id_calories">Calories:</label></th><td><input type="number" name="calories" step="any" required="" id="id_calories"></td></tr>
+<tr><th><label for="id_protein">Protein:</label></th><td><input type="number" name="protein" step="any" required="" id="id_protein"></td></tr>
+<tr><th><label for="id_carbohydrates">Carbohydrates:</label></th><td><input type="number" name="carbohydrates" step="any" required="" id="id_carbohydrates"></td></tr>
+<tr><th><label for="id_fats">Fats:</label></th><td><input type="number" name="fats" step="any" required="" id="id_fats"></td></tr>
+<tr><th><label for="id_goals">Goals:</label></th><td><select name="goals" required="" id="id_goals">
+  <option value="" selected="">---------</option>
+
+  <option value="1">Goals object (1)</option>
+
+  <option value="2">Goals object (2)</option>
+
+</select></td></tr>
+                              </tbody></table>
+                              <input type="submit" value="Submit!" class="btn">
+                        </form>
+			</div>		
+      </div>
+
+      
+      <footer class="page-footer">
+            <div class="right">All Rights Reserved, © My Macro Meter &nbsp;</div>
+      </footer>
+
+
+
+
+</div></main></body></html>

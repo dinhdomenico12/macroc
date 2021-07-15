@@ -3,8 +3,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from main_app.models import Goals, Macros 
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.shortcuts import get_object_or_404, render
+from django.views.generic.edit import CreateView, UpdateView
 # Create your views here.
 
 def index(request):
@@ -30,7 +29,7 @@ class Goals_create(CreateView):
 
 class Macroupdate(UpdateView):
     model = Macros
-    fields = ['name', 'calories','protein','fats']
+    fields = '__all__'
     success_url = '/meals/' 
 
 def macro_delete(request, macro_id):
