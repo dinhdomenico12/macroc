@@ -1,7 +1,6 @@
 {% extends 'home.html' %}
 {% block content %}
-
-      <h1 class="Goals">Daily Macros</h1>
+      <h1 class="Goals">Daily Goals</h1>
       {%for g in goals%}
       <div class="goals-div">
             <h3 class="cals">Calories {{g.calories}} </h3>
@@ -13,7 +12,13 @@
       <table>
             {{ form.as_table }}
       </table>
-
+      <h1 class="Daily_goals">Total Macros</h1>
+      <div class="goals-div">
+            <h3 class="cals">Calories:{{ total.0 }} </h3>
+            <h3 class="protein">Protein:{{ total.1 }}</h3>
+            <h3 class="carbs">Carbs:{{ total.2 }}</h3>
+            <h3 class="fat">Fat:{{ total.3 }}</h3>
+      </div>
       <h1 class="Macros">My Macro Meter</h1>
       {%for m in macros%}
       <div class="totals-div">
@@ -24,12 +29,9 @@
             <h4 class="fat">Fat{{m.fats}}</h4>
             <a href="{% url 'macroupdate' m.id %}">Edit</a>
             <a href='/meals/{{ m.id }}/delete'>Delete</a>
-
       </div>
       {% endfor %}
       <table>
             {{ form.as_table }}
       </table>
-
-      
 {% endblock %}

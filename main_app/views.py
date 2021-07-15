@@ -2,42 +2,51 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from main_app.models import Goals, Macros 
+from main_app.models import Goals, Macros
 from django.views.generic.edit import CreateView, UpdateView
 # Create your views here.
-
 def index(request):
       macros = Macros.objects.all()
       goals = Goals.objects.filter(user=request.user)
-      return render(request, 'macro/index.html', {'macros': macros,'goals':goals})
-
+      count = Macros.objects.values('calories', 'protein','carbohydrates','fats')
+      total = [
+        {"calories":0},
+        {"protein":0},
+        {"carbohydrates":0},
+        {"fats":0},]
+      calories = 0
+      protein = 0
+      carbohydrates = 0
+      fats = 0
+      for c in count:
+        calories += c['calories']
+        protein += c['protein']
+        carbohydrates += c['carbohydrates']
+        fats += c['fats']
+      total[0] =  calories
+      total[1] =  protein
+      total[2] =  carbohydrates
+      total[3] =  fats
+      print(total[0])
+      return render(request, 'macro/index.html', {'macros': macros,'goals':goals,'total':total})
 def home(request):
   return render(request, 'home.html')
-
-
 class Macro_create(CreateView):
       model = Macros
       fields = '__all__'
       success_url = '/meals/'
-
 class Goals_create(CreateView):
       model = Goals
       fields = '__all__'
       success_url = '/meals/'
-
-
-
 class Macroupdate(UpdateView):
     model = Macros
-    fields = '__all__'
-    success_url = '/meals/' 
-
+    fields = ['name', 'calories','protein','carbohydrates','fats']
+    success_url = '/meals/'
 def macro_delete(request, macro_id):
     Macros.objects.filter(id=macro_id).delete()
     return redirect('/meals/')
-
 # sign up form
-
 def signup(request):
   error_message = ''
   if request.method == 'POST':
