@@ -180,10 +180,6 @@ h1{
       justify-content: center;
 }
 
-.daily-goal{
-      display: flex;
-      justify-content: center;
-}
 
 .daily-macros{
       display: flex;
@@ -193,4 +189,87 @@ h1{
 .expiry-month{
       display: flex;
       justify-content: center;
+}
+
+.goals-div{
+      display: flex;
+      justify-content: space-between;
+}
+
+.cals{
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding:50px;
+}
+
+.protein{
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding:50px;
+}
+
+.carbs{
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding:50px;
+}
+
+.fat{
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding:50px;
+}
+
+.index-form{
+      margin-left: 150px;
+      max-width: 80%;
+}
+
+.totals-div{
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: 1px solid #528950;
+      box-sizing: border-box;
+      border-radius: 10px;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+}
+
+.edit-btn{
+      text-decoration: none;
+      color: white;
+      padding: 1rem;
+      margin: 1rem;
+      background:#528950;
+      border-radius: 10px;
+}
+
+
+.delete-btn{
+      text-decoration: none;
+      color: white;
+      padding: 1rem;
+      margin: 1rem;
+      background:#528950;
+      border-radius: 10px;
 }
