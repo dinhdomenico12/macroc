@@ -18,8 +18,8 @@ Do you want to lose weight? Gain muscle? Improve health? Boost performance? This
 
 
 ## Getting Started 
-https://my-macro-meter.herokuapp.com/accounts/login/?next=/
-https://github.com/dinhdomenico12/macroc
+- https://github.com/dinhdomenico12/macroc
+- https://my-macro-meter.herokuapp.com/accounts/login/?next=/
 
 
 
