@@ -19,15 +19,15 @@ Do you want to lose weight? Gain muscle? Improve health? Boost performance? This
 
 
 ## Technologies Used 
-1. python
-2. django
-3. css
-4. html
+1. Python
+2. Django
+3. Css
+4. Html
 
 
 ## Getting Started 
-- https://github.com/dinhdomenico12/macroc
-- https://my-macro-meter.herokuapp.com/accounts/login/?next=/
+Code- https://github.com/dinhdomenico12/macroc
+Get Start- https://my-macro-meter.herokuapp.com/accounts/login/?next=/
 
 
 
@@ -35,5 +35,5 @@ Do you want to lose weight? Gain muscle? Improve health? Boost performance? This
 
 - Personalized comment section
 - Upload own personal files/pictures.
--  Use API
+- Use API
 - Use a Macro Calculator
