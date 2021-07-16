@@ -13,7 +13,7 @@ Do you want to lose weight? Gain muscle? Improve health? Boost performance? This
 <br>
 <img width="723" alt="Screen Shot 2021-07-15 at 6 07 46 PM" src="https://user-images.githubusercontent.com/73449110/125871924-15ff8140-e8c6-4e49-b21b-6cc91b399ac4.png">
 <br>
-![Screen Shot 2021-07-15 at 7 52 56 PM](https://user-images.githubusercontent.com/73449110/125872034-8b8b55cd-ed70-4395-803a-ef28880cb26e.png)
+(https://user-images.githubusercontent.com/73449110/125872034-8b8b55cd-ed70-4395-803a-ef28880cb26e.png)
 
 
 
